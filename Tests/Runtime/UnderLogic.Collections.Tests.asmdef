@@ -1,0 +1,18 @@
+{
+    "name": "UnderLogic.Collections.Tests",
+    "rootNamespace": "UnderLogic.Collections.Tests",
+    "references": [
+        "GUID:590849b2acc6647caa57aeed72c1bbe5",
+        "GUID:0acc523941302664db1f4e527237feb3",
+        "GUID:27619889b8ba8c24980f49ee34dbb44a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
