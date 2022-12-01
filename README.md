@@ -31,7 +31,7 @@ Then link the following folders into the Unity project for easy editing/syncing 
 
 ```shell
 $ cd runtime-collections-project/Assets
-$ ln -s ~/runtime-variables/Samples~ Samples
+$ ln -s ~/runtime-collections/Samples~ Samples
 
 $ mkdir -p Scripts && cd Scripts
 $ ln -s ~/runtime-collections/Editor
