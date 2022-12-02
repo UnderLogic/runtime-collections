@@ -17,6 +17,8 @@ namespace UnderLogic.Collections
         public event UnityAction ItemsChanged;
 
         public bool IsReadOnly => isReadOnly;
+        public IReadOnlyCollection<T> InitialItems => initialItems;
+
         public int Count => items.Count;
         public T this[int index] => items[index];
 
@@ -74,6 +76,8 @@ namespace UnderLogic.Collections
         }
 
         public void CopyTo(T[] array, int arrayIndex) => items.CopyTo(array, arrayIndex);
+
+        public void MakeReadOnly() => isReadOnly = true;
 
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
         public IEnumerator<T> GetEnumerator() => items.GetEnumerator();
