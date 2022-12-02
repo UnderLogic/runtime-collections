@@ -9,6 +9,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `RuntimeSetWatcher<T>` abstract base class
+- `ColorSetWatcher` component
+- `DoubleSetWatcher` component
+- `FloatSetWatcher` component
+- `IntSetWatcher` component
+- `ScriptableObjectSetWatcher` component
+- `StringSetWatcher` component
+- `TransformSetWatcher` component
+- `Vector2IntSetWatcher` component
+- `Vector2SetWatcher` component
+- `Vector3SetWatcher` component
+- `Vector4SetWatcher` component
 - Set Watchers sample scene
 
 ## [0.1.3] - 2022-12-02
