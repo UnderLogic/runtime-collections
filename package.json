@@ -11,6 +11,8 @@
   "keywords": [
     "library",
     "collections",
+    "sets",
+    "lists",
     "shared",
     "data",
     "events"
@@ -20,5 +22,9 @@
     "email": "erik@underlogic.tech",
     "url": "https://underlogic.tech"
   },
-  "samples": []
+  "samples": [{
+    "displayName": "Using Sets",
+    "description": "Contains sample scene demonstrating the use of runtime sets",
+    "path": "Samples~/Sets"
+  }]
 }
