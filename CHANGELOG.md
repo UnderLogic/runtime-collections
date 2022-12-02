@@ -25,6 +25,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `Add(Vector2Int)` method to `Vector2Set` collection
 - `Remove(Vector2Int)` method to `Vector2Set` collection
 - `Vector2IntSet` collection
+- `Vector4Set` collection
 - `ColorSet` collection
 
 ## [0.1.1] - 2022-12-01
