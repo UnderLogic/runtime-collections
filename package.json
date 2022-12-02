@@ -1,6 +1,6 @@
 {
   "name": "com.underlogic.runtime-collections",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "displayName": "Runtime Collections",
   "description": "Runtime collections for shared state and reactive behavior between components and scenes",
   "unity": "2019.1",
@@ -26,5 +26,9 @@
     "displayName": "Using Sets",
     "description": "Contains sample scene demonstrating the use of runtime sets",
     "path": "Samples~/Sets"
+  }, {
+    "displayName": "Using Set Watchers",
+    "description": "Contains sample scene demonstrating the use of runtime set watchers",
+    "path": "Samples~/SetWatchers"
   }]
 }
