@@ -4,7 +4,7 @@
   "displayName": "Runtime Collections",
   "description": "Runtime collections for shared state and reactive behavior between components and scenes",
   "unity": "2019.1",
-  "documentationUrl": "https://github.com/UnderLogic/runtime-collections/wiki",
+  "documentationUrl": "https://underlogic.github.io/runtime-collections/",
   "changelogUrl": "https://github.com/UnderLogic/runtime-collections/CHANGELOG.md",
   "licensesUrl": "https://github.com/UnderLogic/runtime-collections/LICENSE.md",
   "dependencies": {},
