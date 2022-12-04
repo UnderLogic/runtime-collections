@@ -5,7 +5,7 @@ namespace UnderLogic.Collections.Watchers
 {
     public abstract class RuntimeSetWatcher<T, TSet> : MonoBehaviour where TSet : RuntimeSet<T>
     {
-        [SerializeField] private TSet collectionSet;
+        [SerializeField] private TSet collection;
 
         [Header("Behavior")]
         [SerializeField] private bool raiseOnAwake;
@@ -20,6 +20,8 @@ namespace UnderLogic.Collections.Watchers
         
         [Space]
         public UnityEvent onItemsChanged;
+
+        public TSet Collection => collection;
 
         public void RaiseItemAdded(T value) => onItemAdded.Invoke(value);
         public void RaiseItemRemoved(T value) => onItemRemoved?.Invoke(value);
@@ -39,11 +41,11 @@ namespace UnderLogic.Collections.Watchers
 
         private void OnEnable()
         {
-            if (collectionSet != null)
+            if (collection != null)
             {
-                collectionSet.ItemAdded += RaiseItemAdded;
-                collectionSet.ItemRemoved += RaiseItemRemoved;
-                collectionSet.ItemsChanged += RaiseItemsChanged;
+                collection.ItemAdded += RaiseItemAdded;
+                collection.ItemRemoved += RaiseItemRemoved;
+                collection.ItemsChanged += RaiseItemsChanged;
             }
 
             if (raiseOnStart)
@@ -52,12 +54,12 @@ namespace UnderLogic.Collections.Watchers
 
         private void OnDisable()
         {
-            if (collectionSet == null)
+            if (collection == null)
                 return;
 
-            collectionSet.ItemAdded -= RaiseItemAdded;
-            collectionSet.ItemRemoved -= RaiseItemRemoved;
-            collectionSet.ItemsChanged -= RaiseItemsChanged;
+            collection.ItemAdded -= RaiseItemAdded;
+            collection.ItemRemoved -= RaiseItemRemoved;
+            collection.ItemsChanged -= RaiseItemsChanged;
         }
     }
 }
