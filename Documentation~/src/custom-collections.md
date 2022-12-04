@@ -16,5 +16,5 @@ You may also add any additional helper properties and methods as you need.
 
 ### Watchers
 
-1. Create a new class that derives from [`RuntimeSetWatcher<T, TVar>`](watchers/runtime-set-watcher.md), where `T` should be the underlying type and `TSet` is the set type.
+1. Create a new class that derives from [`RuntimeSetWatcher<T, TSet>`](watchers/runtime-set-watcher.md), where `T` should be the underlying type and `TSet` is the set type.
 2. You can now use the watcher component in your scenes.
