@@ -61,6 +61,18 @@ namespace UnderLogic.Collections
             return true;
         }
 
+        public bool TryReplace(T searchValue, T replaceValue)
+        {
+            if (IsReadOnly)
+                throw new InvalidOperationException("Collection is readonly, cannot replace items");
+
+            if (!Remove(searchValue))
+                return false;
+            
+            Add(replaceValue);
+            return true;
+        }
+
         public void Clear()
         {
             if (IsReadOnly)
@@ -96,7 +108,14 @@ namespace UnderLogic.Collections
             ItemsChanged?.Invoke();
         }
 
-        private void OnEnable() => items = new List<T>(initialItems);
+        private void OnEnable()
+        {
+            items = new List<T>();
+            
+            foreach (var item in initialItems)
+                if (!items.Contains(item))
+                    items.Add(item);
+        }
 
         private void OnValidate() => RaiseItemsChanged();
     }

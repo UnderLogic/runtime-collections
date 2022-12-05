@@ -9,7 +9,7 @@ You may also add any additional helper properties and methods as you need.
 1. Create a new class that derives from [`RuntimeSet<T>`](sets/runtime-set.md), where `T` should be the type of set.
 2. Ensure the new type is marked with the `CreateAssetMenu` attribute, so you can create instances in the Editor.
 3. Create any instances of the new variable in your `Assets` folder.
-4. Configure the `isReadOnly` and `initialValues` as needed.
+4. Configure the `isReadOnly` and `initialItems` as needed.
 5. Now you can use them throughout your application.
 
 **NOTE:** While most people create `ScriptableObject` instances in the Editor, you can create them at runtime as well!
