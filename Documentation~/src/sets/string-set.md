@@ -20,3 +20,5 @@ Represents a set of `string` values that can be shared and modified throughout t
 - `Remove(int) : bool` - Removes the string representation of a signed `int` value from the set. Returns whether an item was removed.
 - `Remove(float) : bool` - Removes the string representation of a `float` value from the set. Returns whether an item was removed.
 - `Remove(double) : bool` - Removes the string representation of a signed `int` value from the set. Returns whether an item was removed.
+
+**NOTE:** The string representations will be formatted using `CultureInfo.CurrentCulture`.
