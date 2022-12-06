@@ -37,16 +37,19 @@ namespace UnderLogic.Collections
             return true;
         }
 
-        public void Add(T value)
+        public void Add(T value) => TryAdd(value);
+
+        public bool TryAdd(T value)
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("Collection is readonly, cannot add items");
 
             if (Contains(value))
-                return;
+                return false;
 
             items.Add(value);
             OnItemAdded(value);
+            return true;
         }
 
         public bool Remove(T value)

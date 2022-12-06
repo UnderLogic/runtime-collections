@@ -31,12 +31,13 @@ Represents an observable set of `T` values that can be shared and modified throu
 
 ## Public Methods
 
-- `Contains(T) : bool` - Returns whether the set contains the value provided.
-- `IndexOf(T) : int` - Returns the index of the value within the set, or `-1` if not found.
+- `Contains(T) : bool` - Returns whether the set contains the value `T` provided.
+- `IndexOf(T) : int` - Returns the index of the value `T` within the set, or `-1` if not found.
 - `TryGet(int, out T) : bool` - Attempts to get an item by index and returns the item as an `out` parameter. Returns whether an item was found.
-- `Add(T)` - Adds a value to the set. If the set already contains the value, it is ignored.
-- `Remove(T) : bool` - Attempts to remove an item from the set. Returns whether an item was found and removed.
-- `TryReplace(T, T) : bool` - Attempts to replace one value with another within the set. Returns whether an item was found to be replaced.
+- `Add(T)` - Adds a value `T` to the set. If the set already contains the value, it is ignored.
+- `TryAdd(T) : bool` - Attempts to add a value `T` to the set, returns whether an item was added.
+- `Remove(T) : bool` - Attempts to remove a value `T` from the set. Returns whether an item was removed.
+- `TryReplace(T, T) : bool` - Attempts to replace one value `T` with another `T` within the set. Returns whether an item was found to be replaced.
 - `Clear()` - Removes all items from the set. **Will raise events for each item removed.**
 - `CopyTo(T[], int)` - Copies the items from this set to another `T[]` array.
 - `MakeReadOnly()` - Marks the set as readonly, useful for freezing the collection after initialization.
