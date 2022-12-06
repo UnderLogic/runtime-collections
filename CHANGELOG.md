@@ -4,10 +4,25 @@ All notable changes to this library will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.2.1] - 2022-12-04
+## [0.2.1] - 2022-12-05
 
 ### Added
 
+- `TryAdd(int) : bool` method to `DoubleSet` variant
+- `TryAdd(float) : bool` method to `DoubleSet` variant
+- `TryAdd(int) : bool` method to `FloatSet` variant
+- `TryAdd(bool) : bool` method to `StringSet` variant
+- `TryAdd(int) : bool` method to `StringSet` variant
+- `TryAdd(float) : bool` method to `StringSet` variant
+- `TryAdd(double) : bool` method to `StringSet` variant
+- `TryAdd(Vector2Int) : bool` method to `Vector2Set` variant
+- `TryAdd(Vector2Int) : bool` method to `Vector3Set` variant
+- `TryAdd(Vector2) : bool` method to `Vector3Set` variant
+- `TryAdd(Vector2Int) : bool` method to `Vector4Set` variant
+- `TryAdd(Vector2) : bool` method to `Vector4Set` variant
+- `TryAdd(Vector3) : bool` method to `Vector4Set` variant
+- `TryAdd(T) : bool` method to `RuntimeSet<T>` base class
+- `TryReplace(T, T)` method to `RuntimeSet<T>` base class
 - Docs via `mdbook` in `Documentation~` directory
 - GitHub CI/CD workflows for documentation
 

@@ -8,9 +8,9 @@ by Ryan Hipple.
 
 ## Use Cases
 
-### Shared Data
+### Shared Collections
 
-The common case of needing to share data between various components, potentially across multiple scenes.
+The common case of needing to share collections of data between various components, potentially across multiple scenes.
 Easy to drag and drop references in the Editor and view/modify them in the Inspector during play mode.
 
 See `runtime-variables` library in the [related-libraries](related-libraries.md) section for working with variable data.
