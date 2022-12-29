@@ -7,18 +7,21 @@ Implements `ICollection<T>` and `IEnumerable<T>` interfaces.
 ## Description
 
 Represents an observable set of `T` values that can be shared and modified throughout the application.
+By default, the set does not allow duplicate values but this can be overriden.
 
 ## Serialized Fields (Inspector)
 
 - `isReadOnly : bool` - Whether the set can be mutated.
+- `allowDuplicates : bool` - Whether the set can contain duplicate values.
 - `initialItems : List<T>` - Initial list of items, will be re-applied on restart.
 - `items : List<T>` - The current items in the set.
 
-**NOTE:** Any duplicates in the `initialItems` will **not** be preserved when copied to `items` during `OnEnable()`.
+**NOTE:** Any duplicates in the `initialItems` will **not** be preserved when copied to `items` during `OnEnable()` (unless `allowDuplicates` is `true`).
 
 ## Public Properties
 
 - `IsReadOnly : bool` **(get)** - Whether the set can be mutated.
+- `AllowDuplicates : bool` **(get)** - Whether the set can contain duplicate values.
 - `InitialItems : IReadOnlyCollection<T>` **(get)** - Read-only view of the initial items for the set.
 - `Count : int` **(get)** - The number of items currently in the set.
 - `this[int] : T` **(get)** - Returns the item in the set by index, zero-based.
@@ -35,9 +38,10 @@ Represents an observable set of `T` values that can be shared and modified throu
 - `IndexOf(T) : int` - Returns the index of the value `T` within the set, or `-1` if not found.
 - `TryGet(int, out T) : bool` - Attempts to get an item by index and returns the item as an `out` parameter. Returns whether an item was found.
 - `Add(T)` - Adds a value `T` to the set. If the set already contains the value, it is ignored.
+- `AddRange(IEnumerable<T>)` - Adds a range of values to the set. If the set already contains a value, it is ignored.
 - `TryAdd(T) : bool` - Attempts to add a value `T` to the set, returns whether an item was added.
 - `Remove(T) : bool` - Attempts to remove a value `T` from the set. Returns whether an item was removed.
-- `TryReplace(T, T) : bool` - Attempts to replace one value `T` with another `T` within the set. Returns whether an item was found to be replaced.
+- `TryReplace(T, T) : bool` - Attempts to replace one value `T` with another `T` within the set. Returns whether an item was found to be replaced, and whether the replacement was successful.
 - `Clear()` - Removes all items from the set. **Will raise events for each item removed.**
 - `CopyTo(T[], int)` - Copies the items from this set to another `T[]` array.
 - `MakeReadOnly()` - Marks the set as readonly, useful for freezing the collection after initialization.
@@ -45,3 +49,5 @@ Represents an observable set of `T` values that can be shared and modified throu
 - `RaiseItemsChanged()` - Manually raises the `ItemsChanged` event, useful for forcing refreshes on observers.
 
 **NOTE:** Trying to modify a readonly set will result in an `InvalidOperationException` being thrown.
+
+**NOTE:** Duplicate values are ignored when adding to the set, unless `AllowDuplicates` is set to `true`.

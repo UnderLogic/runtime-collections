@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f2b4be4b5e641019ba52a717937cc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collectionSet: {fileID: 11400000, guid: 2b023396d2e1549f0a0a910badb24a3d, type: 2}
+  collection: {fileID: 11400000, guid: 2b023396d2e1549f0a0a910badb24a3d, type: 2}
   raiseOnAwake: 0
   raiseOnEnable: 0
   raiseOnStart: 0

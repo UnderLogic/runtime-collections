@@ -14,6 +14,7 @@
 
 - [Sets](sets.md)
   - [RuntimeSet\<T>](sets/runtime-set.md)
+  - [BoolSet](sets/bool-set.md)
   - [ColorSet](sets/color-set.md)
   - [DoubleSet](sets/double-set.md)
   - [FloatSet](sets/float-set.md)
@@ -28,6 +29,7 @@
 
 - [Watchers](watchers.md)
   - [RuntimeSetWatcher\<T, TSet>](watchers/runtime-set-watcher.md)
+  - [BoolSetWatcher](watchers/bool-set-watcher.md)
   - [ColorSetWatcher](watchers/color-set-watcher.md)
   - [DoubleSetWatcher](watchers/double-set-watcher.md)
   - [FloatSetWatcher](watchers/float-set-watcher.md)
