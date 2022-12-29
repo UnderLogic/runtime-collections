@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - `AddRange(IEnumerable<T>)` method for `RuntimeSet` collection
 - Icons for `RuntimeSet` collections in the Editor
 
+### Changed
+
+- `Add(T)` method for `RuntimeSet` collection optionally allows duplicates
+- `TryReplace(T, T)` method for `RuntimeSet` collection now checks for duplicates prior to replacing
+
 ## [0.2.2] - 2022-12-08
 
 ### Fixed

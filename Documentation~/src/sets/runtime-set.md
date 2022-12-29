@@ -7,6 +7,7 @@ Implements `ICollection<T>` and `IEnumerable<T>` interfaces.
 ## Description
 
 Represents an observable set of `T` values that can be shared and modified throughout the application.
+By default, the set does not allow duplicate values but this can be overriden.
 
 ## Serialized Fields (Inspector)
 
