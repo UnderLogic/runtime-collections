@@ -2,6 +2,8 @@
 
 [![openupm](https://img.shields.io/npm/v/com.underlogic.runtime-collections?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.underlogic.runtime-collections/)
 
+![image](Documentation~/src/images/cover.png)
+
 Unity package library for sharing collections of data across components and scenes.
 Uses `ScriptableObjects` to store collections and exposes events for when their contents change.
 
