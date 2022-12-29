@@ -1,6 +1,6 @@
 {
   "name": "com.underlogic.runtime-collections",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "displayName": "Runtime Collections",
   "description": "Runtime collections for shared state and reactive behavior between components and scenes",
   "unity": "2019.1",

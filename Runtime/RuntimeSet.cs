@@ -8,14 +8,21 @@ namespace UnderLogic.Collections
 {
     public abstract class RuntimeSet<T> : ScriptableObject, ICollection<T>
     {
+        [Header("Options")]
         [SerializeField] private bool isReadOnly;
+        [SerializeField] private bool allowDuplicates;
+        
+        [Space]
         [SerializeField] private List<T> initialItems = new();
+        
+        [Space]
         [SerializeField] private List<T> items;
 
         public event UnityAction<T> ItemAdded;
         public event UnityAction<T> ItemRemoved;
         public event UnityAction ItemsChanged;
 
+        public bool AllowDuplicates => allowDuplicates;
         public bool IsReadOnly => isReadOnly;
         public IReadOnlyCollection<T> InitialItems => initialItems;
 
@@ -39,12 +46,21 @@ namespace UnderLogic.Collections
 
         public void Add(T value) => TryAdd(value);
 
+        public void AddRange(IEnumerable<T> collection)
+        {
+            if (collection == null)
+                throw new ArgumentNullException(nameof(collection));
+
+            foreach (var value in collection)
+                TryAdd(value);
+        }
+
         public bool TryAdd(T value)
         {
             if (IsReadOnly)
                 throw new InvalidOperationException("Collection is readonly, cannot add items");
 
-            if (Contains(value))
+            if (!AllowDuplicates && Contains(value))
                 return false;
 
             items.Add(value);
@@ -69,11 +85,13 @@ namespace UnderLogic.Collections
             if (IsReadOnly)
                 throw new InvalidOperationException("Collection is readonly, cannot replace items");
 
-            if (!Remove(searchValue))
+            if (!AllowDuplicates && Contains(replaceValue))
                 return false;
             
-            Add(replaceValue);
-            return true;
+            if (!Remove(searchValue))
+                return false;
+
+            return TryAdd(replaceValue);
         }
 
         public void Clear()
@@ -114,10 +132,7 @@ namespace UnderLogic.Collections
         private void OnEnable()
         {
             items = new List<T>();
-            
-            foreach (var item in initialItems)
-                if (!items.Contains(item))
-                    items.Add(item);
+            AddRange(initialItems);
         }
 
         private void OnValidate() => RaiseItemsChanged();
