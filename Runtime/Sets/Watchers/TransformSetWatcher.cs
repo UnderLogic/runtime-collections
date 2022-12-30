@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UnderLogic.Collections.Watchers
+namespace UnderLogic.Collections.Sets.Watchers
 {
     public class TransformSetWatcher : RuntimeSetWatcher<Transform, TransformSet> { }
 }

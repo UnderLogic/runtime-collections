@@ -1,7 +1,7 @@
 using System.Globalization;
 using UnityEngine;
 
-namespace UnderLogic.Collections
+namespace UnderLogic.Collections.Sets
 {
     [CreateAssetMenu(menuName = "Collections/Sets/String Set")]
     public class StringSet : RuntimeSet<string>

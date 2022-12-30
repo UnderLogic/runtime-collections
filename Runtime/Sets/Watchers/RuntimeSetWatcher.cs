@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UnderLogic.Collections.Watchers
+namespace UnderLogic.Collections.Sets.Watchers
 {
     public abstract class RuntimeSetWatcher<T, TSet> : MonoBehaviour where TSet : RuntimeSet<T>
     {

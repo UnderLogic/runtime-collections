@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UnderLogic.Collections
+namespace UnderLogic.Collections.Sets
 {
     [CreateAssetMenu(menuName = "Collections/Sets/Vector2 Set")]
     public class Vector2Set : RuntimeSet<Vector2>
