@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UnderLogic.Collections.Watchers
+namespace UnderLogic.Collections.Sets.Watchers
 {
     public class Vector2SetWatcher : RuntimeSetWatcher<Vector2, Vector2Set> { }
 }

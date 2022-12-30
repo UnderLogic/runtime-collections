@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace UnderLogic.Collections
+namespace UnderLogic.Collections.Sets
 {
     public abstract class RuntimeSet<T> : ScriptableObject, ICollection<T>
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace UnderLogic.Collections
+namespace UnderLogic.Collections.Sets
 {
     [CreateAssetMenu(menuName = "Collections/Sets/Float Set")]
     public class FloatSet : RuntimeSet<float>
